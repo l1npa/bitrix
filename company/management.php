@@ -2,47 +2,70 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Руководство");
 ?>
-<p> 							Успешное развитие бизнеса &ndash; во многом результат квалифицированной работы руководства. 							<b>&laquo;Мебельная компания&raquo;</b> на мебельном рынке уже 18 лет. За это время Компания 							не только сохранила, но и упрочила лидирующие позиции среди ведущих игроков мебельного 							рынка. 						</p>
- 						
-<p> 							<b>&laquo;Мебельная компания&raquo;</b> из года в год расширяет ассортимент выпускаемой продукции, 							наращивает темпы и объемы производства, увеличивает производственные и складские 							площади, развивает отношения с партнерами со всех регионов страны и налаживает связи 							с зарубежными партнерами. В большой степени это заслуга хорошо подготовленного руководящего 							состава и его грамотной политики. 						</p>
- 						 						
-<h3>Собственник Компании &laquo;Мебельная компания&raquo;</h3>
- 						 						
-<table cellspacing="10"> 							
-  <tbody>
-    <tr> 								<td valign="top" colspan="2"> 									Колесников Виктор Федорович 								</td> 							</tr>
-   							
-    <tr> 								<td width="20%" valign="top"> 									<img height="200" width="154" src="/upload/kolesnikov.jpg" title="Колесников Виктор Федорович " alt="Колесников Виктор Федорович " /> 								</td> 								<td width="60%" valign="top"> 									Родился 3 сентября 1964 года.
-        <br />
-       Образование: закончил авиационный факультет Воронежского 									государственного политехнического института. В 1994 году прошел обучение по программе 									&laquo;Подготовка малого и среднего бизнеса&raquo; в США.
-        <br />
-       В настоящее время Виктор Федорович 									возглавляет Управляющую компанию, которая координирует деятельность предприятий, 									входящих в Группу Компаний <b>&laquo;Мебельная компания&raquo;</b>. 								</td> 							</tr>
-   						</tbody>
-</table>
- 						
-<h3>Генеральный директор &laquo;Мебельной компании&raquo;</h3>
- 						
-<table cellspacing="10"> 							
-  <tbody>
-    <tr> 								<td valign="top" colspan="2"> 									Ратченко Александр Петрович 								</td> 							</tr>
-   							
-    <tr> 								<td width="20%" valign="top"> 									<img height="200" width="154" src="/upload/ratchenko.jpg" title="Ратченко Александр Петрович " alt="Ратченко Александр Петрович " /> 								</td> 								<td width="60%" valign="top"> 									Родился 5 июня 1962 года.
-        <br />
-       Образование: Воронежский политехнический институт 									по специальности инженер-технолог; программа &laquo;Эффективное развитие производства&raquo; 									(США).
-        <br />
-       В <b>&laquo;Мебельной компании&raquo;</b> Сергей Фомич с 1994 года. За это время прошел 									путь от начальника цеха до генерального директора предприятия. 								</td> 							</tr>
-   						</tbody>
-</table>
- 						
-<h3>Заместитель генерального директора Управляющей компании</h3>
- 						 						 							
-<table cellspacing="10">
-  <tbody>
-    <tr> 								<td valign="top" colspan="2"> 									Роговой Андрей Владимирович 								</td> 							</tr>
-   							
-    <tr> 								<td width="20%" valign="top"> 									<img height="200" width="154" src="/upload/horn.jpg" title="Роговой Андрей Владимирович" alt="Роговой Андрей Владимирович" /> 								</td> 								<td width="60%" valign="top"> 									Образование: факультет радиотехники Воронежского государственного технического университета.
-        <br />
-       									В Компании с 1 июня 2000 года. 								</td></tr>
-  </tbody>
-</table>
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"staff", 
+	[
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => [
+			0 => "",
+			1 => "",
+		],
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "8",
+		"IBLOCK_TYPE" => "main",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => [
+			0 => "POST",
+			1 => "",
+		],
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N"
+	],
+	false
+);?>
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
